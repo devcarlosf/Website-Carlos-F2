@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Meu Site</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div>
+                <img class="logo" src="./assets/iconsite.png" alt="">
+            </div>
+            <div class="menu">
+                <nav class="nav-list">
+                    <a href="#contato">Contato</a>
+                    <a href="#eu">Sobre mim</a>
+                    <a href="#home">Início</a>
+                </nav>
+            </div>
+        </header>
+        <section id="home">
+            <div class="home-info">
+                <h2>Oi, me chamo Carlos!</h2>
+                <span class="home-position">Estudante de Programação</span>
+                <span class="home-resume">
+                    Estudante de ADS, tenho interesse e vontade de crescer nesse mundo digital.
+                </span>
+
+                <button>
+                    <a href="#contato">Fale comigo!</a>
+                </button>
+            </div>
+            <div class="home-img">
+                <img src="./assets/download.png" alt="Avatar">
+            </div>
+        </section>
+        <section id="eu">
+            <h2 class="eu">Carlos é um jovem de 20 anos apaixonado por videogames, vôlei e esportes em geral. Ele é um fervoroso
+                torcedor do Flamengo e tem uma profunda conexão com computadores, um interesse que remonta à sua
+                infância. Sua personalidade é moldada pela sua paixão por jogos eletrônicos, seu entusiasmo pelos
+                esportes e sua devoção ao time de futebol.</h2>
+        </section>
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <form action="enviar_email.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+body::-webkit-scrollbar {
+width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: black;
+}
+
+main {
+    width: 1110px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 20px;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+    box-shadow: 0 1px 0 white;
+    max-width: 1110px;
+    width: 100%;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+
+}
+
+.nav-list a:hover{
+    text-decoration: underline;
+
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+section#home {
+    height: calc(110vh + 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 20px;
+    width: 100%;
+}
+
+.home-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: justify;
+}
+
+.home-info button {
+    border: none;
+    width: 150px;
+    padding: 10px;
+    background-color: #232F3E;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 5px;
+}
+
+.home-info button a{
+    color: white;
+}
+
+.home-info button:hover{
+    opacity: 2;
+}
+
+.home-img {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-img img{
+    width: 200px;
+    height: 200px;
+    animation: float 5s ease-in infinite;
+    box-shadow: 0 10px 10px;
+    border-radius: 50%;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.logo {
+    width: 50px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+#eu {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
